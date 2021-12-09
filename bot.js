@@ -234,23 +234,6 @@ function onMessageHandler (channel, user, msg, self) {
     }
 }
 
-function requestPartnerStatus(channel, _attempts) {
-    return rp({
-        uri: `https://islilypartneredyet.xyz/raw`,
-        json: true
-    })
-        .then(data =>  {
-            return data;
-        })
-        .catch(err => {
-            if(_attempts < 3) {
-                return requestPartnerStatus(channel, _attempts);
-            }
-            client.say(channel, `bonky_bot out, there was an error`);
-            throw err;
-        })
-}
-
 function randomFromArray(array) {
     return array[Math.floor(Math.random() * array.length)];
 }
