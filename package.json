@@ -10,9 +10,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "request": "^2.88.2",
+    "mysql": "^2.18.1",
     "request-promise": "^4.2.6",
-    "tmi.js": "^1.7.5",
-    "uwufy": "^1.0.7"
+    "sqlite": "^4.0.23",
+    "sqlite3": "^4.2.0",
+    "tmi.js": "^1.8.5"
   }
 }
